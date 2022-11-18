@@ -1,3 +1,6 @@
+@import './_reset';
+@import './_utilities';
+
 *,
 *::before,
 *::after {
@@ -6,29 +9,6 @@
   padding: 0;
 }
 
-/* variables */
-$max-width: 70rem;
-$gap: 1.5rem;
-
-/* Utility classes */
-.container {
-  width: min(100% - 2rem, $max-width);
-  margin-inline: auto;
-}
-
-.display-none {
-  display: none;
-}
-
-.flex {
-  display: flex;
-  gap: $gap;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.items-center {
-  align-items: center;
+body {
+  font-family: 'Inter';
 }

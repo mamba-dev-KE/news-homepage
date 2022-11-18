@@ -1,14 +1,15 @@
 import { data } from '../../assets/data';
+import { Hero } from './Hero';
+import { SideBar } from './SideBar';
 import './Home.scss';
 
 export const Home = () => {
+  const { heroImg, mainTitle, heroText, btnText } = data;
   return (
     <section className="home">
       <div className="container">
-        <article className="hero">
-          <img src={data.heroImg} alt="" />
-          <h1>{data.title}</h1>
-        </article>
+        <Hero />
+        <SideBar />
       </div>
     </section>
   );
