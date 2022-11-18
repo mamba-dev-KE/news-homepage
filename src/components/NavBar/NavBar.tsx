@@ -6,22 +6,20 @@ import './NavBar.scss';
 export const NavBar = () => {
   const { useState } = React;
 
-  const [isToggleMenu, setIsToggleMenu] = useState(true);
+  const [isToggleMenu, setIsToggleMenu] = useState<boolean>(true);
 
   return (
-    <header className="header">
+    <header>
       <div className="navigation-wrapper container flex justify-between items-center">
         <div className="logo">
           <img src={data.logo} alt="logo" />
         </div>
-        <nav>
-          {isToggleMenu && (
-            <ul>
-              {data.menu.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          )}
+        <nav className={!isToggleMenu ? 'display-none' : ''}>
+          <ul>
+            {data.menu.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </nav>
         <MenuToggle
           data={data}
@@ -29,6 +27,7 @@ export const NavBar = () => {
           setIsToggleMenu={setIsToggleMenu}
         />
       </div>
+      {isToggleMenu && <div className="veil" />}
     </header>
   );
 };

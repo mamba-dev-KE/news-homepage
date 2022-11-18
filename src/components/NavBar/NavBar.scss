@@ -1,9 +1,5 @@
-.header-container {
-  position: relative;
-  padding-block: 1rem;
-}
-
 .navigation-wrapper {
+  min-height: 3rem;
   .logo {
     width: 11%;
   }
@@ -15,7 +11,7 @@
 
     width: 75%;
     min-height: 100vh;
-    outline: 2px solid red;
+    background-color: hsl(0 0% 100%);
 
     ul {
       list-style-type: none;
@@ -28,4 +24,16 @@
 
     z-index: 1;
   }
+}
+
+.veil {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+  background-color: hsl(0 0 0 / 0.6);
+  backdrop-filter: blur(100px);
 }

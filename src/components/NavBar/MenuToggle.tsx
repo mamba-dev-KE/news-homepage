@@ -11,14 +11,12 @@ export const MenuToggle = ({
   setIsToggleMenu,
   data,
 }: ToogleProps) => {
-  console.log(isToggleMenu);
-
   return (
     <button onClick={() => setIsToggleMenu(!isToggleMenu)}>
       {isToggleMenu ? (
-        <img src={data.burgerMenuOpen} />
-      ) : (
         <img src={data.burgerMenuClose} />
+      ) : (
+        <img src={data.burgerMenuOpen} />
       )}
     </button>
   );
