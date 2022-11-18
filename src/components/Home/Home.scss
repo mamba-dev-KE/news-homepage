@@ -13,10 +13,6 @@
 /* HERO */
 
 .hero {
-  @media (max-width: 850px) {
-    margin-block-start: 1rem;
-  }
-
   img {
     width: 100%;
   }
@@ -51,21 +47,31 @@
   }
 
   @media (min-width: 400px) {
-    grid-column: 1 / span 9;
+    grid-column: 1 / span 8;
+  }
+
+  @media (max-width: 499px) {
+    margin-block-start: 1rem;
+  }
+
+  @media (min-width: 500px) and (max-width: 849px) {
+    margin-block-start: 2.5rem;
   }
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  margin-block-start: 4rem;
   padding: 1.2rem;
 
   background-color: hsl($color-dark-blue);
   color: hsl($color-offwhite);
 
+  @media (max-width: 400px) {
+    margin-block-start: 4rem;
+  }
   @media (min-width: 400px) {
-    grid-column: 10 / span 3;
+    grid-column: 9 / -1;
     margin-block-start: 0rem;
   }
 }
