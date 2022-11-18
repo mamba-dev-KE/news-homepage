@@ -6,9 +6,15 @@ interface ToogleProps {
   data: DataInterface;
 }
 
-const Toggle = ({ isToggleMenu, setIsToggleMenu, data }: ToogleProps) => {
+export const MenuToggle = ({
+  isToggleMenu,
+  setIsToggleMenu,
+  data,
+}: ToogleProps) => {
+  console.log(isToggleMenu);
+
   return (
-    <button onClick={() => setIsToggleMenu((prev) => !prev)}>
+    <button onClick={() => setIsToggleMenu(!isToggleMenu)}>
       {isToggleMenu ? (
         <img src={data.burgerMenuOpen} />
       ) : (
@@ -17,5 +23,3 @@ const Toggle = ({ isToggleMenu, setIsToggleMenu, data }: ToogleProps) => {
     </button>
   );
 };
-
-export default Toggle;

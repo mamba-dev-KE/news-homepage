@@ -1,7 +1,7 @@
 import React from 'react';
 import { data } from '../../assets/data';
+import { MenuToggle } from './MenuToggle';
 import './NavBar.scss';
-import Toggle from './Toggle';
 
 export const NavBar = () => {
   const { useState } = React;
@@ -9,22 +9,26 @@ export const NavBar = () => {
   const [isToggleMenu, setIsToggleMenu] = useState(true);
 
   return (
-    <nav className="navigation container flex justify-between items-center">
-      <div className="navigation-logo">
-        <img src={data.logo} alt="logo" />
-      </div>
-      <div className="navigation-list-container">
-        <div className="navigation-container">
-          <Toggle data={data} isToggleMenu setIsToggleMenu={setIsToggleMenu} />
+    <header className="header">
+      <div className="navigation-wrapper container flex justify-between items-center">
+        <div className="logo">
+          <img src={data.logo} alt="logo" />
         </div>
-        {isToggleMenu && (
-          <ul className="navigation-list">
-            {data.menu.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        )}
+        <nav>
+          {isToggleMenu && (
+            <ul>
+              {data.menu.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </nav>
+        <MenuToggle
+          data={data}
+          isToggleMenu={isToggleMenu}
+          setIsToggleMenu={setIsToggleMenu}
+        />
       </div>
-    </nav>
+    </header>
   );
 };
