@@ -1,13 +1,25 @@
 @use '../../styles/partials/variables' as *;
 
 .home {
-  isolation: isolate;
+  @media (min-width: 850px) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    margin-block-start: 3rem;
+  }
 }
 
 /* HERO */
 
 .hero {
-  margin-block-start: 1rem;
+  @media (max-width: 850px) {
+    margin-block-start: 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -37,6 +49,10 @@
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+  @media (min-width: 400px) {
+    grid-column: 1 / span 9;
+  }
 }
 
 /* SIDEBAR */
@@ -47,4 +63,9 @@
 
   background-color: hsl($color-dark-blue);
   color: hsl($color-offwhite);
+
+  @media (min-width: 400px) {
+    grid-column: 10 / span 3;
+    margin-block-start: 0rem;
+  }
 }

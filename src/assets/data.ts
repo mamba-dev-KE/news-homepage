@@ -1,14 +1,18 @@
 import logo from '../assets/logo.svg';
 import burgerMenuOpen from '../assets/icon-menu.svg';
 import burgerMenuClose from '../assets/icon-menu-close.svg';
-import heroImg from '../assets/image-web-3-mobile.jpg';
+import heroImgMobile from '../assets/image-web-3-mobile.jpg';
+import heroImgDesktop from '../assets/image-web-3-desktop.jpg';
 
 export interface DataInterface {
   menu: string[];
   logo: string;
   burgerMenuOpen: string;
   burgerMenuClose: string;
-  heroImg: string;
+  heroImg: {
+    mobile: string;
+    desktop: string;
+  };
   mainTitle: string;
   heroText: string;
   btnText: string;
@@ -34,7 +38,10 @@ export const data: DataInterface = {
   logo,
   burgerMenuOpen,
   burgerMenuClose,
-  heroImg,
+  heroImg: {
+    mobile: heroImgMobile,
+    desktop: heroImgDesktop,
+  },
   mainTitle: 'The Bright Future of Web 3.0? ',
   heroText:
     'We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise? ',
