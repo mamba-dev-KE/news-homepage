@@ -8,6 +8,7 @@
 
 /* variables */
 $max-width: 70rem;
+$gap: 1.5rem;
 
 /* Utility classes */
 .container {
@@ -21,6 +22,7 @@ $max-width: 70rem;
 
 .flex {
   display: flex;
+  gap: $gap;
 }
 
 .justify-between {
