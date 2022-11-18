@@ -1,10 +1,10 @@
-import { data } from '@/assets/data';
+import { NavBar } from './components';
 
 const App = () => {
   return (
-    <div>
-      <img src={data.logo} />
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 };
 

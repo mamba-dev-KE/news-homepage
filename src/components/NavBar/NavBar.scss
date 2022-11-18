@@ -1,0 +1,29 @@
+.navigation {
+  position: relative;
+  padding-block: 1rem;
+}
+
+.navigation-logo {
+  width: 11%;
+}
+
+.navigation-list-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  width: 75%;
+  min-height: 100vh;
+
+  outline: 2px solid red;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-container {
+  button {
+    background-color: transparent;
+    border: 0;
+  }
+}
