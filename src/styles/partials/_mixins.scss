@@ -1,0 +1,10 @@
+$breakpoints: (
+  small: 400px,
+  medium: 850px,
+);
+
+@mixin media-query($size) {
+  @media (min-width: $size) {
+    color: red;
+  }
+}

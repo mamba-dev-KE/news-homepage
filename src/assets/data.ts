@@ -3,6 +3,9 @@ import burgerMenuOpen from '../assets/icon-menu.svg';
 import burgerMenuClose from '../assets/icon-menu-close.svg';
 import heroImgMobile from '../assets/image-web-3-mobile.jpg';
 import heroImgDesktop from '../assets/image-web-3-desktop.jpg';
+import cardOne from '../assets/image-retro-pcs.jpg';
+import cardThree from '../assets/image-gaming-growth.jpg';
+import cardTwo from '../assets/image-top-laptops.jpg';
 
 export interface DataInterface {
   menu: string[];
@@ -31,6 +34,12 @@ export interface DataInterface {
       text: string;
     };
   };
+  trending: {
+    title: string;
+    subtitle: string;
+    text: string;
+    img: string;
+  }[];
 }
 
 export const data: DataInterface = {
@@ -57,8 +66,28 @@ export const data: DataInterface = {
       text: 'What are the possible adverse effects of on-demand AI image generation?',
     },
     bottom: {
-      title: ' Is VC Funding Drying Up?',
+      title: 'Is VC Funding Drying Up?',
       text: 'Private funding by VC firms is down 50% YOY. We take a look at what that means.',
     },
   },
+  trending: [
+    {
+      title: '01',
+      subtitle: 'Reviving Retro PCs',
+      text: 'What happens when old PCs are given modern upgrades? ',
+      img: cardOne,
+    },
+    {
+      title: '02',
+      subtitle: 'Top 10 Laptops of 2022',
+      text: 'Our best picks for various needs and budgets.',
+      img: cardTwo,
+    },
+    {
+      title: '03',
+      subtitle: 'The Growth of Gaming',
+      text: 'How the pandemic has sparked fresh opportunities.',
+      img: cardThree,
+    },
+  ],
 };
