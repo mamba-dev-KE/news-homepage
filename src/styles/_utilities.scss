@@ -1,4 +1,4 @@
-@import './_variables';
+@use './variables' as *;
 
 .container {
   width: min(100% - 2rem, $max-width);
