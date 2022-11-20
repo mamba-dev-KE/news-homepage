@@ -67,12 +67,35 @@
   background-color: hsl($color-dark-blue);
   color: hsl($color-offwhite);
 
+  &-separator {
+    border-bottom: 1px solid hsl($color-grayish-blue);
+    padding-block: 2rem;
+  }
+
+  p {
+    color: hsl($color-grayish-blue);
+    line-height: 1.75;
+  }
+
   @media (min-width: 400px) {
     grid-column: 9 / -1;
   }
 
   @media (max-width: 850px) {
     margin-block-start: 4rem;
+  }
+}
+
+.sidebar-top {
+  h2 {
+    padding-block-start: 0.5rem;
+    padding-block-end: 1.5rem;
+    font-size: 2rem;
+    color: hsl($color-orange);
+  }
+
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
