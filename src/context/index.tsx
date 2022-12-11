@@ -1,5 +1,5 @@
 import React, { ReactNode, useContext } from 'react';
-import { data, DataInterface } from '@/assets/data';
+import { data, DataInterface } from 'assets/data';
 
 const { createContext } = React;
 
@@ -7,7 +7,7 @@ interface AppDataContextProviderInterface {
   children: ReactNode;
 }
 
-export const AppDataContext = createContext<DataInterface>();
+export const AppDataContext = createContext<DataInterface | null>(null);
 
 export const AppDataContextProvider = ({
   children,

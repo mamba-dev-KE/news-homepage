@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from '../../assets/data';
+import { data } from 'assets/data';
 import { MenuToggle } from './MenuToggle';
 import * as useHooks from 'usehooks-ts';
 import './NavBar.scss';

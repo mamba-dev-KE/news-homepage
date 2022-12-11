@@ -62,19 +62,20 @@
 /* SIDEBAR */
 
 .sidebar {
-  padding: 1.2rem;
+  padding-inline: 1.2rem;
 
   background-color: hsl($color-dark-blue);
   color: hsl($color-offwhite);
 
-  &-separator {
-    border-bottom: 1px solid hsl($color-grayish-blue);
-    padding-block: 2rem;
+  hr {
+    margin-block: 1.75rem;
+    opacity: 0.5;
   }
 
   p {
-    color: hsl($color-grayish-blue);
+    color: hsla($color-grayish-blue);
     line-height: 1.75;
+    font-size: 0.95rem;
   }
 
   @media (min-width: 400px) {
@@ -88,8 +89,9 @@
 
 .sidebar-top {
   h2 {
-    padding-block-start: 0.5rem;
+    padding-block-start: 1.2rem;
     padding-block-end: 1.5rem;
+
     font-size: 2rem;
     color: hsl($color-orange);
   }
@@ -97,6 +99,10 @@
   h3 {
     font-size: 1.25rem;
   }
+}
+
+.sidebar-bottom {
+  padding-block-end: 1.2rem;
 }
 
 /* TRENDING */
@@ -111,6 +117,10 @@
   @media (min-width: 880px) {
     grid-column: 1 / -1;
   }
+}
+
+.trending {
+  margin-block-start: 3.75rem;
 }
 
 .trending-card {

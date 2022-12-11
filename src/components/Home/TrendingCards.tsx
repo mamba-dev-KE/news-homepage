@@ -1,4 +1,4 @@
-import { data } from '../../assets/data';
+import { data } from 'assets/data';
 
 export const TrendingCards = () => {
   const { trending } = data;
@@ -6,7 +6,7 @@ export const TrendingCards = () => {
   return (
     <div className="trending flex">
       {trending.map((article) => (
-        <article className="trending-card flex">
+        <article key={article.title} className="trending-card flex">
           <img src={article.img} alt={article.subtitle} />
           <div className="trending-card-text">
             <h4>{article.title}</h4>

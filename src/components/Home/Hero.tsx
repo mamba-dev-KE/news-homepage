@@ -1,5 +1,5 @@
 import * as useHooks from 'usehooks-ts';
-import { data } from '../../assets/data';
+import { data } from 'assets/data';
 
 export const Hero = () => {
   const { useWindowSize } = useHooks;
