@@ -30,6 +30,8 @@
     line-height: 1.7;
     color: hsl($color-dark-grayish-blue);
     margin-block-start: 1.3rem;
+
+    max-width: 59ch;
   }
 
   button {
@@ -57,6 +59,9 @@
   @media (min-width: 500px) and (max-width: 849px) {
     margin-block-start: 2.5rem;
   }
+}
+
+.hero-text {
 }
 
 /* SIDEBAR */
@@ -110,7 +115,7 @@
 .trending {
   width: 100%;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     flex-direction: column;
   }
 
@@ -121,14 +126,36 @@
 
 .trending {
   margin-block-start: 3.75rem;
+  margin-block-end: 5rem;
 }
 
 .trending-card {
+  align-items: center;
+
   img {
-    width: 33.33%;
+    width: 26.33%;
+    height: 12.75vh;
+
+    object-fit: cover;
   }
 }
 
 .trending-card-text {
   flex: 1;
+
+  h4 {
+    font-size: 1.8rem;
+    color: hsl($color-grayish-blue);
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: $font-weight-bolder;
+  }
+
+  p {
+    font-size: 0.94rem;
+    line-height: 2;
+    color: hsl($color-dark-grayish-blue);
+  }
 }

@@ -1,8 +1,7 @@
-import * as useHooks from 'usehooks-ts';
+import { useWindowSize } from 'usehooks-ts';
 import { data } from 'assets/data';
 
 export const Hero = () => {
-  const { useWindowSize } = useHooks;
   const { width } = useWindowSize();
 
   const { heroImg, mainTitle, heroText, btnText } = data;
@@ -11,9 +10,13 @@ export const Hero = () => {
   return (
     <article className="hero">
       <img src={isMobileWidth ? heroImg.mobile : heroImg.desktop} alt="" />
-      <h1>{mainTitle}</h1>
-      <p>{heroText}</p>
-      <button>{btnText}</button>
+      <div className="flex">
+        <h1>{mainTitle}</h1>
+        <div className="hero-text">
+          <p>{heroText}</p>
+          <button>{btnText}</button>
+        </div>
+      </div>
     </article>
   );
 };
